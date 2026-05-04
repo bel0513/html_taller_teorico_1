@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloque vs Línea - Guía Visual</title>
+<style>
+    body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 20px auto;
+        color: #333;
+    }
+    /* Estilo para Elementos de Bloque */
+    .ejemplo-bloque {
+        background-color: #ffe0e0; /* Rojo claro */
+        border: 2px solid #ff5f5f;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    /* Estilo para Elementos en Línea */
+    .ejemplo-inline {
+        background-color: #e0f0ff; /* Azul claro */
+        border: 2px solid #5fb2ff;
+        padding: 2px 5px;
+    }
+
+    hr { border: 0; border-top: 1px solid #ccc; margin: 40px 0; }
+    code {background: #eee; padding: 2px 4px; border-radius: 4px;}
+</style>
+</head>
+<body>
+    
+    <h1>Guia de Flujo HTML</h1>
+
+    <section>
+        <h2>1. Elementos de Bloque (<code>display: block</code>)</h2>
+        <p>Observa como estas cajas ocupan <strong>todo el ancho</strong> y se apilan una sobre otra:</p>
+
+        <div class="ejemplo-bloque">Soy un <code>&lt;div&gt;</code> (bloque 1)</div>
+        <div class="ejemplo-bloque">Soy un <code>&lt;div&gt;</code> (bloque 2) 
+            
+        <p><em>Conclusion:</em> Siempre empiezan en una linea nueva</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>2. Elementos en Linea (<code>display: inline</code>)</h2>
+        <p>Observa como estos elementos fluyen <strong>dentro del texto</strong> y solo ocupan el ancho de su contenido:</p>
+
+        <p>
+            En ste parrafo, tenemos un
+            <span class="ejemplo_inline">span azul"</span>
+            seguido inmediatamente por otro
+            <span class="ejempo-inline">segundo span</span>
+        </p>
+        
+        <p><em>Conclusión:</em> No rompen el flujo, se quedan al lado de sus vecinos.</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>3. Comparacion Visual Final</h2>
+
+        <div> class="ejemplo-bloque">
+            Soy un Bloque. Si intentas poner un
+            <span class="ejemplo-inline">Inline</span>
+            aqui, yo lo contengo, pero sigo siendo una caja grande.
+        </div>
+
+        <p>
+            Texto normal
+            <span class="ejemplo-inline">Soy Inline</span>
+            <div class="ejemplo-bloque">¡Cuidado! Soy un Bloque apareciendo de la nada. He forzado un salto de linea.</div> 
+            ... el texto continúa después del bloque.
+
+        </p>
+    </section>
+</body>
+</html>
